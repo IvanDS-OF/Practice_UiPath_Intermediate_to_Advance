@@ -2,7 +2,7 @@
   "name": "String Manipulation",
   "projectId": "644beda1-1196-4d28-b5c8-a516ae9a87ca",
   "description": "This program is to know how to manipulate some strings using .NET\r\n",
-  "main": "Test\\SubString.xaml",
+  "main": "Test\\Practice 1 - With no RegEx.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.4]",
     "UiPath.Mail.Activities": "[1.23.1]",
@@ -69,6 +69,12 @@
     {
       "filePath": "Test\\SubString.xaml",
       "uniqueId": "a0f7b016-9618-4082-91bc-5df3e3278c7a",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Test\\Practice 1 - With no RegEx.xaml",
+      "uniqueId": "01aae473-6ecd-4b7a-b283-db74ff421c10",
       "input": [],
       "output": []
     }
