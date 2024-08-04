@@ -2,7 +2,7 @@
   "name": "String Manipulation",
   "projectId": "644beda1-1196-4d28-b5c8-a516ae9a87ca",
   "description": "This program is to know how to manipulate some strings using .NET\r\n",
-  "main": "Main.xaml",
+  "main": "Test\\SubString.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.4]",
     "UiPath.Mail.Activities": "[1.23.1]",
@@ -51,6 +51,24 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "d4edad0f-0939-4766-bcf5-2e322b12fdd1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Test\\Split Case.xaml",
+      "uniqueId": "fc0594aa-931b-482a-894b-cb4f53c3caf2",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Test\\Indexes.xaml",
+      "uniqueId": "39a71514-6431-491e-a42d-dd331862e371",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Test\\SubString.xaml",
+      "uniqueId": "a0f7b016-9618-4082-91bc-5df3e3278c7a",
       "input": [],
       "output": []
     }
