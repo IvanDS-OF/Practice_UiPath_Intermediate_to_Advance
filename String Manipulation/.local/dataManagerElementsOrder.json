@@ -12,12 +12,87 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "FindWord&Sequence_3",
+        "NewText&Sequence_3",
         "NewVariable&Sequence_2",
         "NewArray&Sequence_2",
         "FinalOutput&Sequence_1",
         "Bookstores&Sequence_1",
         "Author&Sequence_1",
         "StringOne&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test/Split Case.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ValueSplitted&Sequence_1",
+        "ValueToSplit&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test/Indexes.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IndexUno&Sequence_1",
+        "StringMia&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test/SubString.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MyString&Sequence_1",
+        "SubStringMine&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test/Practice 1 - With no RegEx.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TemporaryIndex&Sequence_1",
+        "EmailAddressPart2&Sequence_1",
+        "EmailAddressPart1&Sequence_1",
+        "FinalOutput&Sequence_1",
+        "InputData&Sequence_1",
+        "IndexToFind&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test/Practice Using RegEx.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FoundEmails&Sequence_1",
+        "InputData&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test/Manipulation using String Activities.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FirstName&Sequence_1",
+        "LastName&Sequence_1",
+        "Str2Right&Sequence_4",
+        "Str1Right&Sequence_2",
+        "InputData&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
