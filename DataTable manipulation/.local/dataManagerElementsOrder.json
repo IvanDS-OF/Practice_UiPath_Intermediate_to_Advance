@@ -15,6 +15,21 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Excercices/Excercise - WithView.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExcelRowIndex&Sequence_1",
+        "CurrentRowIndex&Sequence_1",
+        "TableFromExcel&Sequence_1",
+        "ValueA&Sequence_4",
+        "ValueB&Sequence_4",
+        "Total&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
