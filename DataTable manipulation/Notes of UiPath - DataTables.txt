@@ -1,0 +1,79 @@
+Notes of UiPath - DataTables
+	AddData Column
+Añade una nueva columa a una tabla ya existente, puede estar vacia o no
+
+	Add Data row
+Añade informacion a una nueva fila de una Tabla ya existente, es importante que la informacion que entra haga match con el numero de columnas que hay inicialmente
+
+	Build Data Table
+Crea de forma manual una tabla
+
+	Clear Data Table
+Limpia toda la tabla existente
+
+	Filter Data Table
+Nos permite filtrar la tabla en base a nuestras condiciones
+
+	For Each Row in Data Table
+Igual a un For Each bucle
+
+	Generate Data Table From Text
+Podemos crear una tabla desde un texto estructurado, y nos deja seleccionar el separador e la fila y la columna
+
+	Get Row Item
+Regresa un valor de una file en una Tabla de acuerdo a una columna especifica. 
+
+	Join Data Tables
+Combina dos tablas, teniendo en Consideración un valor en donde las columnas se lamen igual, y las formas para unirlas son Inner, Left y Right
+
+	Lookup Data Table
+Es igual a un VLOOKUP de excel, 
+
+	Merge Data Table
+Une el Destino con la Fuente. Es mas sencillo que el Join
+
+	Output Data Table
+escribe al final la tabla que le damos como en formato .CSV
+
+	Remove Data Column
+Quita una columna, considera el indice o nombre
+
+	Remove Data Row
+Quita una fila, teniendo en consideracion l indice
+
+	Remove Duplicate Rows
+Elimina las filas duplicadas, como en excel
+
+	Sort Data Tabl
+Sirve para acomodar los datos dada una columna y sus valores
+
+	Update ow Item
+Podemos actualizar el valor de una celda. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
