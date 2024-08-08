@@ -11,7 +11,12 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "dt_Users&Sequence_1",
+        "dt_OverdueBooks&Sequence_1",
+        "dt_BorrowedBooks&Sequence_1",
+        "OutputTable_String&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -34,7 +39,12 @@
     {
       "Path": "Excercices/Excercice - NoView.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "index&Sequence_1",
+        "ValueB&Sequence_1",
+        "ValueA&Sequence_1",
+        "dt_InputTable&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
