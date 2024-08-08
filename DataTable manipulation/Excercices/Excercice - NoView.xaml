@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Excercice___NoView" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="998,2163" sap2010:WorkflowViewState.IdRef="Excercice___NoView_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Excercice___NoView" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1097,2367" sap2010:WorkflowViewState.IdRef="Excercice___NoView_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -112,11 +112,19 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excercice___NoView" sap:VirtualizedContainerService.HintSize="592,2098" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excercice___NoView" sap:VirtualizedContainerService.HintSize="592,2302" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputTable" />
       <Variable x:TypeArguments="ui:GenericValue" Name="ValueA" />
       <Variable x:TypeArguments="ui:GenericValue" Name="ValueB" />
+      <Variable x:TypeArguments="x:Int32" Name="index">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ForEachRow_1</x:String>
+            <x:String x:Key="SourcePropertyName">CurrentIndex</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -125,17 +133,23 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:Comment sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// This code is to &#xD;&#xA;Read an Excel file without open it&#xD;&#xA;There is information in the A and B column, we need to sum() them and&#xD;&#xA;Write the result in the C column&#xD;&#xA;All this without oopen the Excel file&#xD;&#xA;" />
     <ui:Comment sap:VirtualizedContainerService.HintSize="530,107" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// To not open the excel file we need only to read using a different activity" />
-    <ui:ReadRange AddHeaders="True" DataTable="[dt_InputTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:B" SheetName="Sheet1" WorkbookPath="Sample Columns - Notview.xlsx" />
+    <ui:ReadRange AddHeaders="False" sap2010:Annotation.AnnotationText="IMPORTANT: Remember to Unchecked the Headers " DataTable="[dt_InputTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="530,151" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:B" SheetName="Sheet1" WorkbookPath="Sample Columns - Notview.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
     <ui:Comment sap:VirtualizedContainerService.HintSize="530,126" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Now we have a data table and it is necessary to add a new column to store the resul of the addition" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="C" DataTable="[dt_InputTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="530,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" MaxLength="10" Unique="False" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="C" DataTable="[dt_InputTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="530,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" MaxLength="100" Unique="False" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;Starting calculating sums&quot;]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_InputTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1102" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[dt_InputTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,790" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="11">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,915" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,594" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,18 +179,19 @@
                 <InArgument x:TypeArguments="x:Object">[Integer.Parse(ValueA) + Integer.Parse(ValueB)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[CurrentRow(2)]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Writin the values to Excel&quot;]" />
-            <ui:WriteRange AddHeaders="False" DataTable="[dt_InputTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Sample Columns - Notview.xlsx">
-              <ui:WriteRange.StartingCell>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:WriteRange.StartingCell>
-            </ui:WriteRange>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;The Value A is: &quot; + Integer.Parse(ValueA).ToString + &quot;  The value B is: &quot; + Integer.Parse(ValueB).ToString + &quot;  Result: &quot; + (Integer.Parse(ValueA)+Integer.Parse(ValueB)).ToString]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[dt_InputTable]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Writin the values to Excel&quot;]" />
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_InputTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="530,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Sample Columns - Notview.xlsx">
+      <ui:WriteRange.StartingCell>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:WriteRange.StartingCell>
+    </ui:WriteRange>
   </Sequence>
 </Activity>

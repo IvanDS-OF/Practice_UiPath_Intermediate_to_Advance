@@ -2,7 +2,7 @@
   "name": "DataTable manipulation",
   "projectId": "483ec61c-7e32-4c18-a056-0781b97eef23",
   "description": "Blank Process",
-  "main": "Excercices\\Excercise - WithView.xaml",
+  "main": "Excercices\\Excercice - NoView.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.4]",
     "UiPath.Mail.Activities": "[1.23.1]",
@@ -58,6 +58,12 @@
     {
       "filePath": "Excercices\\Excercise - WithView.xaml",
       "uniqueId": "7943ce46-0a45-47b4-b612-9f1aec052dbd",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Excercices\\Excercice - NoView.xaml",
+      "uniqueId": "549bad74-fdf4-4ac3-8bf6-e0cdc1d4bc34",
       "input": [],
       "output": []
     }
