@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FinalPractice" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1097,5002" sap2010:WorkflowViewState.IdRef="FinalPractice_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FinalPractice" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1097,4994" sap2010:WorkflowViewState.IdRef="FinalPractice_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -35,6 +35,7 @@
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.Activities.System.Collections</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -92,7 +93,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FinalPractice" sap:VirtualizedContainerService.HintSize="704,4937" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FinalPractice" sap:VirtualizedContainerService.HintSize="704,4929" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CardExpenses" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CashExpenses" />
@@ -112,13 +113,13 @@
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_CashExpenses]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="642,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="Data\CashPayments.xlsx" />
     <ui:MergeDataTable Destination="[dt_CardExpenses]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="642,167" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Ignore" Source="[dt_CashExpenses]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Getting the list  of months for whoch we have expenses&quot;]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CardExpenses]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="642,1063" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CardExpenses]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="642,1055" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,865" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,857" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,21 +138,15 @@
                 <InArgument x:TypeArguments="x:String">[ExpenseDate.Remove(0,3).Remove(2,5)]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[not Months.Contains(ExpenseMonth)]" sap:VirtualizedContainerService.HintSize="450,441" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[not Months.Contains(ExpenseMonth)]" sap:VirtualizedContainerService.HintSize="450,433" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uasc:AppendItemToCollection x:TypeArguments="x:Object" Collection="[Months]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
-                    <uasc:AppendItemToCollection.Items>
-                      <scg:List x:TypeArguments="InArgument(x:Object)" Capacity="4">
-                        <InArgument x:TypeArguments="x:Object">[ExpenseMonth]</InArgument>
-                      </scg:List>
-                    </uasc:AppendItemToCollection.Items>
-                  </uasc:AppendItemToCollection>
+                  <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="354,158" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_4" ItemToAppend="[ExpenseMonth]" List="[Months]" />
                 </Sequence>
               </If.Then>
               <If.Else>

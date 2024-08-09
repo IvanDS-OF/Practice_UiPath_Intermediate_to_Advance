@@ -2,7 +2,7 @@
   "name": "Working with Tables in Excel",
   "projectId": "1c8a61c1-8b44-4fda-8eb8-42a3906f32fc",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "Excercisees\\FinalPractice.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.4]",
     "UiPath.Mail.Activities": "[1.23.1]",
@@ -51,6 +51,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "992ef324-0cee-40ee-8975-bc07d8639b04",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Excercisees\\FinalPractice.xaml",
+      "uniqueId": "58ca754a-978f-476e-8eed-147aa700c4ae",
       "input": [],
       "output": []
     }
