@@ -11,7 +11,13 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "Last_Name&Sequence_2",
+        "First_Name&Sequence_1",
+        "dt_Candidates&Sequence_1",
+        "dt_ProductCandidates&Sequence_1",
+        "dt_HRCandidates&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
